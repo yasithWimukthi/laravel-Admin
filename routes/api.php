@@ -20,4 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::prefix('admin')->group(function () {
     Route::post('register', [\App\Http\Controllers\AuthController::class , 'register']);
+    Route::post('login', [\App\Http\Controllers\AuthController::class , 'login']);
+    Route::post('user', [\App\Http\Controllers\AuthController::class , 'user']);
 });
